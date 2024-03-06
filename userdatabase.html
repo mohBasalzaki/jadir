@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اسم المسابقة | المنشئ</title>
+    <title>قاعدة بيانات</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="src/css/datatables.min.css">
@@ -126,7 +126,7 @@
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
+              <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-expanded="false" >
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z" /></svg>
                 </span>
@@ -134,10 +134,10 @@
                   المحتوى
                 </span>
               </a>
-              <div class="dropdown-menu show">
+              <div class="dropdown-menu">
                 <ul class="dropdown-menu-columns">
                   <li class="dropdown-menu-column">
-                    <a class="dropdown-item active" href="competitions.html">
+                    <a class="dropdown-item" href="competitions.html">
                       مسابقات
                     </a>
                   </li>
@@ -159,7 +159,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="userdatabase.html" >
+              <a class="nav-link active" href="userdatabase.html" >
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
                 </span>
@@ -300,233 +300,422 @@
         </div>
       </div>
     </header>
-    
     <div class="page-wrapper">
-        <!-- Page header -->
-        <div class="page-header d-print-none">
-            <div class="container-xl">
-                <div class="row g-2 align-items-center">
-                    <div class="col">
-                        <!-- Page pre-title -->
-                        <h2 class="page-title mb-2">
-                            اسم المسابقة
-                        </h2>
-                        <ol class="breadcrumb" aria-label="breadcrumbs">
-                            <li class="breadcrumb-item"><a href="dashboard.html">الرئيسية</a></li>
-                            <li class="breadcrumb-item"><a href="competitions.html">المسابقات</a></li>
-                            <li class="breadcrumb-item active"><a href="#">اسم المسابقة</a></li>
-                        </ol>              
-                    </div>
-                </div>
+      <!-- Page header -->
+      <div class="page-header d-print-none">
+        <div class="container-xl">
+          <div class="row g-2 align-items-center">
+            <div class="col">
+              <!-- Page pre-title -->
+              <h2 class="page-title mb-2">
+                قاعدة بيانات
+              </h2>
+              <ol class="breadcrumb" aria-label="breadcrumbs">
+                <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                <li class="breadcrumb-item active"><a href="#">قاعدة بيانات</a></li>
+              </ol>              
             </div>
+            <div class="col align-items-end d-flex gap-2 justify-content-end">
+              <div class="mb-0">
+                <label for="formFile" class="form-label">رفع ملف اكسل لقاعدة البيانات</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="d-block">
+                <button class="btn btn-primary">ربط وحفظ البيانات</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Page body -->
-        <div class="page-body">
-            <div class="container-xl">
-                <form action="">
-                  <div class="row row-deck row-cards mb-3">
-                    <div class="col-12">
-                        <div class="card shadow-sm">
-                            <div class="card-body p-2 p-md-3">
-                              <div class="mb-4">
-                                <label class="form-label m-0">بناء المسابقة</label>
-                                <p class="m-0">يمكنك هذا القسم من بناء الهيكل ومحتوى المسابقة.</p>
-                              </div>
-                              <div class="card mb-3">
-                                <div class="card-body p-2 p-md-3">
-                                  <div class="accordion mb-2 mb-md-3" id="accordionExample">
-                                    <div class="accordion-item">
-                                      <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-                                          <div class="align-items-center d-flex">
-                                            <div class="text-primary me-2">
-                                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z"></path></svg>
-                                            </div>
-                                            <div class="d-block">
-                                              <h4 class="m-0">المستوى</h4>
-                                              <h3 class="m-0">#1</h3>
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </h2>
-                                      <div id="collapse-1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body p-2 p-md-3 pt-0">
-                                          <div class="card mb-3">
-                                            <div class="card-body p-2 p-md-3">
-                                              <div class="row mb-3">
-                                                <div class="col-12 col-md-8">
-                                                  <div class="row">
-                                                    <div class="col-12 col-md-2">
-                                                      <label class="form-label">درجة السؤال</label>
-                                                      <input type="number" class="form-control" id="" placeholder="اكتب الدرجة">
-                                                    </div>
-                                                    <div class="col-12 col-md-10">
-                                                      <label class="form-label required">السؤال</label>
-                                                      <input type="name" class="form-control" id="" placeholder="اكتب السؤال">
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div class="col-12 col-md-4">
-                                                  <label for="formFile" class="form-label">مرفقات</label>
-                                                  <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                              </div>
-                                              <label class="form-label">وصف السؤال</label>
-                                              <textarea name="" class="form-control" id=""></textarea>
-                                              <div class="mb-3">
-                                                <h3 class="mb-3">الإجابات:</h3>
-                                                <div class="group">
-                                                  <label class="form-label">إجابة</label>
-                                                  <div class="input-group shadow-1">
-                                                    <input type="text" class="form-control shadow-none" autocomplete="off" />
-                                                    <span class="input-group-text">
-                                                      <input class="form-check-input m-0" type="radio" />
-                                                    </span>
-                                                  </div>
-                                                </div>
-                                                <div class="group">
-                                                  <label class="form-label">إجابة</label>
-                                                  <div class="input-group shadow-1">
-                                                    <input type="text" class="form-control shadow-none" autocomplete="off" />
-                                                    <span class="input-group-text">
-                                                      <input class="form-check-input m-0" type="radio" />
-                                                    </span>
-                                                  </div>
-                                                </div>
-                                                <div class="btn mt-3">اضف اجابة</div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="d-grid d-md-flex gap-2 justify-content-md-center">
-                                            <button class="btn" type="button">اضف سؤال جديد</button>
-                                            <button class="btn btn-danger" type="button">حذف المستوى</button>
-                                            <button class="btn btn-primary" type="button">حفظ المستوى</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!-- مستوى -->
-                                  <div class="accordion mb-2 mb-md-3" id="accordionExample">
-                                    <div class="accordion-item">
-                                      <h2 class="accordion-header">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
-                                          <div class="align-items-center d-flex">
-                                            <div class="text-primary me-2">
-                                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z"></path></svg>
-                                            </div>
-                                            <div class="d-block">
-                                              <h4 class="m-0">المستوى</h4>
-                                              <h3 class="m-0">#2</h3>
-                                            </div>
-                                          </div>
-                                        </button>
-                                      </h2>
-                                      <div id="collapse-2" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body p-2 p-md-3 pt-0">
-                                          <div class="card mb-3">
-                                            <div class="card-body p-2 p-md-3">
-                                              <div class="row mb-3">
-                                                <div class="col-12 col-md-8">
-                                                  <div class="row">
-                                                    <div class="col-12 col-md-2">
-                                                      <label class="form-label">درجة السؤال</label>
-                                                      <input type="number" class="form-control" id="" placeholder="اكتب الدرجة">
-                                                    </div>
-                                                    <div class="col-12 col-md-10">
-                                                      <label class="form-label required">السؤال</label>
-                                                      <input type="name" class="form-control" id="" placeholder="اكتب السؤال">
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div class="col-12 col-md-4">
-                                                  <label for="formFile" class="form-label">مرفقات</label>
-                                                  <input class="form-control" type="file" id="formFile">
-                                                </div>
-                                              </div>
-                                              <label class="form-label">وصف السؤال</label>
-                                              <textarea name="" class="form-control" id=""></textarea>
-                                              <div class="mb-3">
-                                                <h3 class="mb-3">الإجابات:</h3>
-                                                <div class="group">
-                                                  <label class="form-label">إجابة</label>
-                                                  <div class="input-group shadow-1">
-                                                    <input type="text" class="form-control shadow-none" autocomplete="off" />
-                                                    <span class="input-group-text">
-                                                      <input class="form-check-input m-0" type="radio" />
-                                                    </span>
-                                                  </div>
-                                                </div>
-                                                <div class="group">
-                                                  <label class="form-label">إجابة</label>
-                                                  <div class="input-group shadow-1">
-                                                    <input type="text" class="form-control shadow-none" autocomplete="off" />
-                                                    <span class="input-group-text">
-                                                      <input class="form-check-input m-0" type="radio" />
-                                                    </span>
-                                                  </div>
-                                                </div>
-                                                <div class="btn mt-3">اضف اجابة</div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div class="d-grid d-md-flex gap-2 justify-content-md-center">
-                                            <button class="btn" type="button">اضف سؤال جديد</button>
-                                            <button class="btn btn-danger" type="button">حذف المستوى</button>
-                                            <button class="btn btn-primary" type="button">حفظ المستوى</button>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="d-flex justify-content-center">
-                                    <button class="btn" type="button">
-                                      <span class="me-2">اضف مستوي جديد</span>
-                                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bookmark" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z"></path></svg>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="mb-2">
-                                <div class="d-flex gap-2 justify-content-between justify-content-md-end">
-                                  <button class="btn" type="button">حفظ كمسودة</button>
-                                  <!-- <button class="btn btn-primary" type="button">الخطوة التالية</button> -->
-                                  <a href="contest-options.html" class="btn btn-primary">الخطوة التالية</a>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <div class="row row-deck row-cards">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">قاعدة بيانات</h3>
                 </div>
-                </form>
+                <div class="table-responsive">
+                  <table id="myTable" class="table table-striped display w-100">
+                    <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>الاسم</th>
+                          <th>المجموعة</th>
+                          <th>تاريخ الإشتراك</th>
+                          <th>اجراء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>124340</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div>                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>124341</td>
+                          <td>محمد الزاكي</td>
+                          <td>رجال</td>
+                          <td>25-2-2024</td>
+                          <td>
+                            <div class="dropdown">
+                              <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                              <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">عرض</a>
+                                <a class="dropdown-item" href="#">تعديل</a>
+                                <a class="dropdown-item" href="#">تكرار</a>
+                                <a class="dropdown-item text-red" href="#">حذف</a>
+                              </div>
+                            </div> 
+                          </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>#</th>
+                            <th>الاسم</th>
+                            <th>المجموعة</th>
+                            <th>تاريخ الإشتراك</th>
+                            <th>اجراء</th>
+                        </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <footer class="footer footer-transparent d-print-none">
-            <div class="container-xl">
-                <div class="row text-center align-items-center flex-row-reverse">
-                    <div class="col-lg-auto ms-lg-auto">
-                    <ul class="list-inline list-inline-dots mb-0">
-                        <li class="list-inline-item"><a href="#" target="_blank" class="link-secondary" rel="noopener">سياسة الخصوصية</a></li>
-                        <li class="list-inline-item"><a href="#" target="_blank" class="link-secondary" rel="noopener">الشروط والأحكام</a></li>
-                        <li class="list-inline-item"><a href="#" target="_blank" class="link-secondary" rel="noopener">اتصل بنا</a></li>
-                    </ul>
-                    </div>
-                    <div class="col-12 col-lg-auto mt-3 mt-lg-0">
-                    <ul class="list-inline list-inline-dots mb-0">
-                        <li class="list-inline-item">
-                        جميع الحقوق محفوظة
-                        <a href="https://jadir.sa" class="link-secondary">منصة جدير</a>
-                        2023 &copy;
-                        </li>
-                    </ul>
-                    </div>
-                </div>
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container-xl">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item"><a href="#" target="_blank" class="link-secondary" rel="noopener">سياسة الخصوصية</a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" class="link-secondary" rel="noopener">الشروط والأحكام</a></li>
+                <li class="list-inline-item"><a href="#" target="_blank" class="link-secondary" rel="noopener">اتصل بنا</a></li>
+              </ul>
             </div>
-        </footer>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">
+                  جميع الحقوق محفوظة
+                  <a href="https://jadir.sa" class="link-secondary">منصة جدير</a>
+                  2023 &copy;
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+  </div>
+  <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">إنشاء مسابقة</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body pb-md-0">
+          <div class="mb-3">
+            <label class="form-label">اسم المسابقة</label>
+            <input type="text" class="form-control" name="example-text-input" placeholder="ادخل اسم المسابقة">
+          </div>
+          <label class="form-label">اختر نوع المسابقة</label>
+          <div class="form-selectgroup-boxes row">
+            <div class="col-md-6 col-6">
+              <label class="form-selectgroup-item mb-2 mb-md-3">
+                <input type="radio" name="report-type" value="1" class="form-selectgroup-input" checked>
+                <span class="align-items-baseline align-items-center d-flex form-selectgroup-label p-3">
+                  <span class="me-3">
+                    <span class="form-selectgroup-check"></span>
+                  </span>
+                  <span class="form-selectgroup-label-content">
+                    <span class="form-selectgroup-title strong mb-1">مسابقة تحدي المستوى</span>
+                    <span class="d-block text-muted">تظهر في علامات تبويب المتصفح وأشرطة الإشارات المرجعية.</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="col-md-6 col-6">
+              <label class="form-selectgroup-item mb-2 mb-md-3">
+                <input type="radio" name="report-type" value="1" class="form-selectgroup-input">
+                <span class="align-items-baseline align-items-center d-flex form-selectgroup-label p-3">
+                  <span class="me-3">
+                    <span class="form-selectgroup-check"></span>
+                  </span>
+                  <span class="form-selectgroup-label-content">
+                    <span class="form-selectgroup-title strong mb-1">مسابقة التصفيات</span>
+                    <span class="d-block text-muted">تظهر في علامات تبويب المتصفح وأشرطة الإشارات المرجعية.</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="form-selectgroup-boxes row">
+            <div class="col-md-6 col-6">
+              <label class="form-selectgroup-item mb-2 mb-md-3">
+                <input type="radio" name="report-type" value="1" class="form-selectgroup-input">
+                <span class="align-items-baseline align-items-center d-flex form-selectgroup-label p-3">
+                  <span class="me-3">
+                    <span class="form-selectgroup-check"></span>
+                  </span>
+                  <span class="form-selectgroup-label-content">
+                    <span class="form-selectgroup-title strong mb-1">تحدي الوقت</span>
+                    <span class="d-block text-muted">تظهر في علامات تبويب المتصفح وأشرطة الإشارات المرجعية.</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+            <div class="col-md-6 col-6">
+              <label class="form-selectgroup-item mb-2 mb-md-3">
+                <input type="radio" name="report-type" value="1" class="form-selectgroup-input">
+                <span class="align-items-baseline align-items-center d-flex form-selectgroup-label p-3">
+                  <span class="me-3">
+                    <span class="form-selectgroup-check"></span>
+                  </span>
+                  <span class="form-selectgroup-label-content">
+                    <span class="form-selectgroup-title strong mb-1">سؤال وجواب</span>
+                    <span class="d-block text-muted">تظهر في علامات تبويب المتصفح وأشرطة الإشارات المرجعية.</span>
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="create-contest.html" class="btn btn-primary w-100">إنشاء</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- DataTables -->
+  <script src="src/js/jquery-3.6.0.min.js"></script>
+  <script src="src/js/datatables.min.js"></script>
+  <script src="src/js/pdfmake.min.js"></script>
+  <script src="src/js/vfs_fonts.js"></script>
+  <script src="src/js/custom.js"></script>
   <!-- Libs JS -->
   <script src="src/libs/apexcharts/dist/apexcharts.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/js/jsvectormap.min.js" defer></script>
