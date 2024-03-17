@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الإعدادات</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="src/css/tabler-icons.min.css">
+    <link href="src/css/dropzone.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/highlight.css">
     <link rel="stylesheet" href="src/css/datatables.min.css">
     <link rel="stylesheet" href="src/css/tabler.rtl.css">
     <link rel="stylesheet" href="src/css/tabler-social.rtl.css">
@@ -29,6 +29,9 @@
             <img src="src/img/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
           </a>
         </h1>
+        <div class="d-grid px-3">
+          <div class="btn justify-content-start">الباقه الحالية: تأسيس</div>
+        </div>
         <div class="navbar-nav flex-row d-lg-none">
           <div class="d-none d-lg-flex">
             <div class="nav-item dropdown d-none d-md-flex me-3">
@@ -158,13 +161,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contestants.html" >
+              <a class="nav-link" href="userdatabase.html" >
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
                 </span>
-                <span class="nav-link-title">
-                  المتسابقون
-                </span>
+                <span class="nav-link-title">قاعدة البيانات</span>
               </a>
             </li>
             <li class="nav-item">
@@ -347,6 +348,9 @@
                         <li class="btn h-100 me-2 mb-2 nav-item p-0">
                           <a href="#tabs-text-ex6" class="nav-link border-0" data-bs-toggle="tab">تصميم الشهادات</a>
                         </li>
+                        <li class="btn h-100 me-2 mb-2 nav-item p-0">
+                          <a href="#tabs-text-ex7" class="nav-link border-0" data-bs-toggle="tab">إدارة المستخدمين</a>
+                        </li>
                       </ul>
                     </div>
                     <div class="card-body">
@@ -468,8 +472,8 @@
                                 <button class="btn btn-danger" type="button">حذف الحقل</button>
                               </div>
                             </div>
-
                           </div>
+                          
                           <div class="d-grid d-md-flex gap-2 justify-content-md-center">
                             <button class="btn btn-primary" type="button">حفظ الإعدادات</button>
                           </div>
@@ -662,6 +666,88 @@
                           <p class="mb-3">يمكنك تصميم الشهادات الخاصة بموقعك.</p>
                         </div>
 
+                        <div class="tab-pane" id="tabs-text-ex7">
+                          <h2 class="m-0">إدارة المستخدمين</h2>
+                          <p class="mb-3">هذا القسم خاص بمدراء الموقع، يمكنك اضافة/إدارة المستخدمين في هذا القسم</p>
+
+                          <div class="card mb-3">
+                            <div class="card-body p-2 p-md-3">
+                              <h3 class="mb-3">إضافة مستخدم جديد</h3>
+                              <div class="mb-3">
+                                <label class="form-label required">البريد الإلكتروني</label>
+                                <input type="name" class="form-control" id="" placeholder="ادخل ادخل عنوان البريد الإلكتروني الخاص بالمستخدم الجديد">
+                              </div>
+                              
+                              <div class="row mb-3">
+                                <div class="col-12 col-md-6">
+                                  <label class="form-label required">كلمة المرور</label>
+                                  <div class="input-group input-group-flat">
+                                    <input type="password" class="form-control" placeholder="كلمة المرور" autocomplete="off" />
+                                    <span class="input-group-text">
+                                      <a href="#" class="link-secondary" data-bs-toggle="tooltip" aria-label="عرض كلمة المرور" data-bs-original-title="عرض كلمة المرور">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path></svg>
+                                      </a>
+                                    </span>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <label class="form-label required">تأكيد كلمة المرور</label>
+                                  <div class="input-group input-group-flat">
+                                    <input type="password" class="form-control" placeholder="تأكيد كلمة المرور" autocomplete="off" />
+                                    <span class="input-group-text">
+                                      <a href="#" class="link-secondary" data-bs-toggle="tooltip" aria-label="عرض كلمة المرور" data-bs-original-title="عرض كلمة المرور">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"></path></svg>
+                                      </a>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="align-items-center align-items-md-end d-flex justify-content-between">
+                                <div class="m-0">
+                                  <label class="form-label">تعيين دور</label>
+                                  <select class="form-select">
+                                    <option value="1">كامل الصلاحيات</option>
+                                    <option value="2">محرر مسابقات</option>
+                                  </select>
+                                </div>
+                                <button class="btn btn-primary" type="button">اضف مستخدم</button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card mb-3">
+                            <div class="card-body p-2 p-md-3">
+                              <div class="table-responsive">
+                                <table id="myTable" class="table table-striped display w-100">
+                                  <thead>
+                                    <tr>
+                                      <th>اسم المستخدم</th>
+                                      <th>تاريخ التسجيل</th>
+                                      <th>اجراء</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>محمد الزاكي</td>
+                                      <td>25-2-2024</td>
+                                      <td>
+                                        <div class="dropdown">
+                                          <a href="#" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown">خيارات</a>
+                                          <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">تعديل</a>
+                                            <a class="dropdown-item text-red" href="#">حذف</a>
+                                          </div>
+                                        </div>                            
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                 </div>                  
@@ -714,11 +800,11 @@
   <script src="src/js/vfs_fonts.js"></script>
   <script src="src/js/custom.js"></script>
   <!-- Libs JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="src/js/dropzone-min.js"></script>
+  <script src="src/js/highlight.min.js"></script>
 
   <!-- and it's easy to individually load additional languages -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+  <script src="src/js/go.min.js"></script>
   <script src="src/libs/apexcharts/dist/apexcharts.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/js/jsvectormap.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/maps/world.js" defer></script>

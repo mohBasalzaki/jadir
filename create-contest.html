@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إنشاء مسابقة</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/tabler-icons.min.css">
+    <link href="src/css/dropzone.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/css/datatables.min.css">
     <link rel="stylesheet" href="src/css/tabler.rtl.css">
     <link rel="stylesheet" href="src/css/tabler-social.rtl.css">
@@ -28,6 +28,9 @@
             <img src="src/img/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
           </a>
         </h1>
+        <div class="d-grid px-3">
+          <div class="btn justify-content-start">الباقه الحالية: تأسيس</div>
+        </div>
         <div class="navbar-nav flex-row d-lg-none">
           <div class="d-none d-lg-flex">
             <div class="nav-item dropdown d-none d-md-flex me-3">
@@ -157,13 +160,11 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contestants.html" >
+              <a class="nav-link" href="userdatabase.html" >
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
                 </span>
-                <span class="nav-link-title">
-                  المتسابقون
-                </span>
+                <span class="nav-link-title">قاعدة البيانات</span>
               </a>
             </li>
             <li class="nav-item">
@@ -456,7 +457,7 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/tinymce/tinymce.min.js" defer></script>
+    <script src="src/js/tinymce.min.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         let options = {
@@ -495,7 +496,7 @@
   <script src="src/js/vfs_fonts.js"></script>
   <script src="src/js/custom.js"></script>
   <!-- Libs JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
+  <script src="src/js/dropzone-min.js"></script>
   <script src="src/libs/apexcharts/dist/apexcharts.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/js/jsvectormap.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/maps/world.js" defer></script>

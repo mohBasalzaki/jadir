@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تخصيص الألوان</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/tabler-icons.min.css">
+    <link href="src/css/dropzone.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/css/datatables.min.css">
     <link rel="stylesheet" href="src/css/tabler.rtl.css">
     <link rel="stylesheet" href="src/css/tabler-social.rtl.css">
@@ -80,7 +80,7 @@
           <a href="custom-font.html" class="btn btn-primary">
             <span>الخطوط</span>
           </a>
-          <a href="" class="btn btn-primary">
+          <a href="/vendor/index.html" class="btn btn-primary">
             <span class="me-1">معاينة الموقع</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
           </a>
@@ -102,10 +102,9 @@
             <div class="container-xl">
                 <div class="row row-deck row-cards mb-3">
                     <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                            </div>
-                        </div>
+                      <div class="card">
+                        <iframe src="vendor/index.html" style="height: 100vh;"> </iframe>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -136,7 +135,7 @@
     </div>
 
   <!-- Libs JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/libs/dropzone/dist/dropzone-min.js"></script>
+  <script src="src/js/dropzone-min.js"></script>
   <script src="src/libs/apexcharts/dist/apexcharts.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/js/jsvectormap.min.js" defer></script>
   <script src="src/libs/jsvectormap/dist/maps/world.js" defer></script>
