@@ -751,24 +751,80 @@
                         <div class="card shadow-sm mb-3">
                             <div class="card-body">
                               <div class="mb-2">
-                                <label class="form-label required">نوع التخمين</label>
+                                <label class="form-label required">الجنس</label>
                                 <label class="form-check form-check-inline">
                                   <input class="form-check-input" type="radio" name="radios-inline" checked="">
-                                  <span class="form-check-label">تخمين يدوي</span>
+                                  <span class="form-check-label">ذكر</span>
                                 </label>
                                 <label class="form-check form-check-inline">
                                   <input class="form-check-input" type="radio" name="radios-inline">
-                                  <span class="form-check-label">تخمين آلي</span>
+                                  <span class="form-check-label">انثى</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="radios-inline">
+                                  <span class="form-check-label">الكل</span>
                                 </label>
                               </div>
+
                               <div class="mb-2">
-                                <label class="form-label">اختر المجموعة المتسابقين</label>
-                                <input type="text" id="" class="form-control" placeholder="المجموعة">
+                                <label class="form-label required">نوع التخمين</label>
+                                <label class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="radios-inline" checked="">
+                                  <span class="form-check-label">الأعلى درجة</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="radios-inline">
+                                  <span class="form-check-label">اجتياز بدرجة كاملة</span>
+                                </label>
                               </div>
+
+                              <div class="mb-2">
+                                <label class="form-label">مجموعة المتسابقين</label>
+                                <select class="form-select" aria-label="">
+                                  <option selected>اختر مجموعة المتسابقين</option>
+                                  <option value="1">مجموعة 1</option>
+                                  <option value="2">مجموعة 2</option>
+                                  <option value="3">جميع المجموعات</option>
+                                </select>
+                              </div>
+
                               <div class="mb-2">
                                 <label class="form-label required">عدد الفائزين</label>
                                 <input type="number" id="" class="form-control" placeholder="1">
                               </div>
+
+                              <div class="mb-2">
+                                <label class="form-label required">طريقة التخمين</label>
+                                <label class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="radios-inline" checked="">
+                                  <span class="form-check-label">آلي</span>
+                                </label>
+                                <label class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="radios-inline">
+                                  <span class="form-check-label">يدوي</span>
+                                </label>
+                              </div>
+
+                              <div class="mb-2">
+                                <label class="form-label required">الوقت وتاريخ البداية</label>
+                                <div class="input-icon mb-2">
+                                  <input class="form-control" placeholder="Select a date" id="datepicker-icon" value="2024-02-20">
+                                  <span class="input-icon-addon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path><path d="M11 15h1"></path><path d="M12 15v3"></path></svg>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="mb-2">
+                                <label class="form-label">رابط النتائج</label>
+                                <div class="input-icon">
+                                  <input type="text" value="https://site.jadir.sa/prj_5ae74426fe935327a8" class="form-control" placeholder="Search…" readonly="">
+                                  <span class="input-icon-addon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 3v4a1 1 0 0 0 1 1h4"></path><path d="M18 17h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h4l5 5v7a2 2 0 0 1 -2 2z"></path><path d="M16 17v2a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2"></path></svg>
+                                  </span>
+                                </div>
+                              </div>
+
                               <div class="d-flex mb-3">
                                     <div class="form-check m-0">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">

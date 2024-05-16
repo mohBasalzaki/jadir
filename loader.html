@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader</title>
+</head>
+<style>
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #4F588D;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+</style>
+<body>
+    <!-- start loader icon -->
+    <div class="loader"></div>
+    <!-- end loader icon -->
+
+    <!-- this js code !important -->
+    <script>
+        // احذف علامات التعليق ليعمل اللودر
+        // window.addEventListener("load", () => {
+        //     const loader = document.querySelector(".loader");
+
+        //     loader.classList.add("loader--hidden");
+
+        //     loader.addEventListener("transitionend", () => {
+        //         document.body.removeChild(loader);
+        //     });
+        // });
+    </script>
+</body>
+</html>
